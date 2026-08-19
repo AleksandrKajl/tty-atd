@@ -1,0 +1,4 @@
+#ifndef ATD_SERVER_HPP
+#define ATD_SERVER_HPP
+
+#endif //ATD_SERVER_HPP

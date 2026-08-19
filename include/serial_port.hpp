@@ -1,0 +1,4 @@
+#ifndef ATD_SERIAL_PORT_HPP
+#define ATD_SERIAL_PORT_HPP
+
+#endif //ATD_SERIAL_PORT_HPP
