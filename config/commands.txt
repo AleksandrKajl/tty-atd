@@ -1,1 +1,6 @@
-
+AT=OK
+ATE0=OK
+ATE1=OK
+ATI=tty-atd\r\nOK
+AT+COPS=OK
+AT+CPIN=+CPIN: READY\r\nOK
