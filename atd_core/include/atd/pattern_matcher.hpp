@@ -5,7 +5,7 @@
 
 namespace atd {
 
-bool matches(std::string_view patern, std::string_view command);
+bool matches(std::string_view pattern, std::string_view command);
 
 }
 
