@@ -1,4 +1,5 @@
 #include "atd/command_dictionary.hpp"
+#include "atd/pattern_matcher.hpp"
 
 #include <fstream>
 #include <stdexcept>
@@ -84,6 +85,17 @@ CommandDictionary::CommandDictionary(const std::string& path) {
     if (file.bad()) {
         throw std::runtime_error("Не удалось прочитать словарь: " + path);
     }
+}
+
+std::string_view CommandDictionary::findResponse(std::string_view normalizedCommand) const {
+
+    for (std::size_t index = 0; index < rules_.size(); index++) {
+        if (matches(rules_[index].pattern, normalizedCommand)) {
+            return rules_[index].response;
+        }
+    }
+
+    return std::string_view{};
 }
 
 } // namespace atd
